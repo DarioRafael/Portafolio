@@ -1,0 +1,70 @@
+body {
+    background: gray;
+    margin: 0;
+    padding: 10vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 20vh);
+    flex-direction: column;
+}
+
+header {
+    top: 0;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    font-size: 1em;
+    padding: 0;
+}
+
+header .site-title {
+    margin: 0;
+    font-size: 2em;
+    padding-left: 5vw; /* Separation from the left */
+}
+
+header .nav-menu {
+    margin-right: 5vw; /* Separation from the right */
+}
+
+header nav {
+    display: flex;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-left: 3vw; /* Separation between title and menu items */
+    font-size: 1em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+footer {
+    background: whitesmoke;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    padding: 1vh 0;
+    font-size: 1em; /* Relative to the base font size */
+}
+
+.font {
+    font-family: Arial, sans-serif;
+}
