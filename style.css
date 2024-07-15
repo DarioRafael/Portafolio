@@ -82,6 +82,8 @@ footer {
     font-family: Arial, sans-serif;
 }
 
+/*Mejoras*/
+
 @media (max-width: 768px) {
     body {
         padding: 5vh 0;
