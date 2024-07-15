@@ -9,6 +9,10 @@ body {
     flex-direction: column;
 }
 
+.divCenter {
+    margin: 10em;
+}
+
 header {
     top: 0;
     background: whitesmoke;
@@ -25,11 +29,11 @@ header {
 header .site-title {
     margin: 0;
     font-size: 2em;
-    padding-left: 5vw; /* Separation from the left */
+    padding-left: 5vw;
 }
 
 header .nav-menu {
-    margin-right: 5vw; /* Separation from the right */
+    margin-right: 5vw;
 }
 
 header nav {
@@ -44,7 +48,7 @@ header ul {
 }
 
 header ul li {
-    margin-left: 3vw; /* Separation between title and menu items */
+    margin-left: 3vw;
     font-size: 1em;
 }
 
@@ -52,6 +56,15 @@ header ul li a {
     text-decoration: none;
     color: black;
     font-size: 1em;
+}
+
+header ul li a:hover {
+    background-color: dimgrey;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 footer {
@@ -62,9 +75,86 @@ footer {
     text-align: center;
     justify-content: center;
     padding: 1vh 0;
-    font-size: 1em; /* Relative to the base font size */
+    font-size: 1em;
 }
 
 .font {
     font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 5vh 0;
+        flex-direction: column;
+    }
+
+    .divCenter {
+        margin: 5em;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1vh 0;
+    }
+
+    header .site-title {
+        padding-left: 2vw;
+    }
+
+    header .nav-menu {
+        margin-right: 2vw;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out; /* Cambia la duración de la transición aquí */
+        position: fixed;
+        top: 10vh; /* Ajusta según la altura de tu header */
+        left: 0;
+        height: calc(100vh - 10vh); /* Ajusta según la altura de tu header */
+        background-color: whitesmoke; /* Ajusta según el color que prefieras */
+        width: 40%; /* Ajusta el ancho del menú según tu preferencia */
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu.no-transition {
+        transition: none;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    header ul li {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    header ul li a {
+        width: 100%;
+        padding: 1vh 2vw;
+        text-align: left;
+    }
+
+    header ul li a:hover {
+        background-color: blue;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1em;
+        padding: 1vh 2vw;
+    }
+
+    footer {
+        padding: 2vh 0;
+    }
 }
