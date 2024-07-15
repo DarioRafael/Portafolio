@@ -1,5 +1,6 @@
 body {
-    background: gray;
+    background: #FFFFFF;
+    color: #333333;
     margin: 0;
     padding: 10vh 0;
     display: flex;
@@ -15,7 +16,7 @@ body {
 
 header {
     top: 0;
-    background: whitesmoke;
+    background: #F0F0F0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,7 @@ header {
 header .site-title {
     margin: 0;
     font-size: 2em;
+    color: #004080;
     padding-left: 5vw;
 }
 
@@ -54,12 +56,12 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: black;
+    color: #004080;
     font-size: 1em;
 }
 
 header ul li a:hover {
-    background-color: dimgrey;
+    background-color: #A8D5BA;
     transition: background-color 0.3s ease;
 }
 
@@ -68,22 +70,84 @@ header ul li a:hover {
 }
 
 footer {
-    background: whitesmoke;
+    background: #F0F0F0;
+    color: #333333;
     bottom: 0;
     width: 100%;
     position: fixed;
     text-align: center;
     justify-content: center;
     padding: 1vh 0;
-    font-size: 1em;
+    font-size: 0.5em;
 }
 
 .font {
     font-family: Arial, sans-serif;
+
 }
 
-/*Mejoras*/
+.language-toggle {
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    color: white;
+    margin-left: 2vw;
 
+}
+
+.language-menu {
+    position: relative;
+}
+
+.language-menu > div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004080; /* Fondo de idioma */
+    padding: 1vh;
+    border-radius: 0.5em;
+    color: #FFFFFF; /* Asegúrate de que el color de texto sea blanco */
+}
+
+
+.language-menu.active > div {
+    display: block;
+}
+
+.language-menu button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1vh 2vw;
+    text-align: left;
+    cursor: pointer;
+}
+
+#language-button {
+
+    padding: 1vh 2vw;
+    color: #004080;
+}
+
+.language-button {
+    color: #FFFFFF; /* Cambio de color del texto */
+    padding: 5px 10px; /* Ajusta el padding según el diseño */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que son clickeables */
+    margin-right: 5px; /* Añade margen derecho para separar los botones */
+}
+
+
+.language-menu button:hover {
+    background-color: #A8D5BA;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     body {
         padding: 5vh 0;
@@ -107,13 +171,13 @@ footer {
     header .nav-menu {
         margin-right: 2vw;
         transform: translateX(-100%);
-        transition: transform 0.5s ease-in-out; /* Cambia la duración de la transición aquí */
+        transition: transform 0.5s ease-in-out;
         position: fixed;
-        top: 10vh; /* Ajusta según la altura de tu header */
+        top: 10vh;
         left: 0;
-        height: calc(100vh - 10vh); /* Ajusta según la altura de tu header */
-        background-color: whitesmoke; /* Ajusta según el color que prefieras */
-        width: 40%; /* Ajusta el ancho del menú según tu preferencia */
+        height: calc(100vh - 10vh);
+        background-color: #004080;
+        width: 40%;
         z-index: 1000;
     }
 
@@ -141,22 +205,78 @@ footer {
         width: 100%;
         padding: 1vh 2vw;
         text-align: left;
+        color: #FFFFFF;
     }
 
     header ul li a:hover {
-        background-color: blue;
+        background-color: #A8D5BA;
         transition: background-color 0.3s ease;
     }
 
-    .menu-toggle {
+    .menu-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .menu-toggle, .language-toggle {
         display: block;
         border: none;
         background-color: transparent;
         font-size: 1em;
         padding: 1vh 2vw;
+        cursor: pointer;
+        color: #004080;
+        margin: 0.5vh 2vw;
     }
 
     footer {
         padding: 2vh 0;
+    }
+
+    .language-menu {
+        position: static;
+        width: auto;
+
+    }
+
+    .language-menu.active > div {
+        display: block;
+    }
+
+    .language-menu > div {
+        position: absolute;
+        top: 11em;
+        left: 2vw;
+        color: #FFFFFF;
+        padding: 1vh;
+        border-radius: 0.5em;
+        width: auto;
+    }
+
+    .language-menu > .content-language {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #004080;
+        padding: 1em;
+        border-radius: 0.5em;
+        color: #FFFFFF;
+        width: 0; /* Empieza con ancho cero */
+        overflow: hidden; /* Oculta el contenido que exceda el ancho */
+        transition: width 3s ease; /* Transición suave del ancho */
+    }
+
+    .language-menu.active > .content-language {
+        width: 120px; /* Ancho deseado para mostrar el contenido */
+    }
+
+
+
+    .language-menu button:hover {
+        background-color: #A8D5BA;
+        transition: background-color 0.3s ease;
     }
 }

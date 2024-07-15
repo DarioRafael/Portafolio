@@ -1,0 +1,34 @@
+{
+  "es": {
+    "site_title": "Dario Rafael",
+    "options": "Opciones",
+    "language": "Idioma",
+    "home": "Inicio",
+    "about_me": "Sobre mí",
+    "experience": "Experiencia Laboral",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "certifications": "Certificaciones",
+    "menu_options": "Secciones",
+    "welcome_heading": "Bienvenido a mi portafolio",
+    "welcome_text": "Aquí podrás encontrar la información que desees de mí.",
+    "contact": "Contacto: dariorafita23@gmail.com"
+  },
+  "en": {
+    "site_title": "Dario Rafael",
+    "options": "Options",
+    "language": "Language",
+    "home": "Home",
+    "about_me": "About Me",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "menu_options": "Sections",
+    "welcome_heading": "Welcome to my portfolio",
+    "welcome_text": "Here you can find the information you want about me.",
+    "contact": "Contact: dariorafita23@gmail.com"
+  }
+}
