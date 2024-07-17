@@ -1,24 +1,35 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav-menu");
     const languageToggle = document.querySelector(".language-toggle");
     const languageMenu = document.querySelector(".language-menu");
+    const darkModeButton = document.querySelector(".darkMode");
 
-    menuToggle.addEventListener("click", function() {
+    menuToggle.addEventListener("click", function () {
         if (languageMenu.classList.contains("active")) {
             languageMenu.classList.remove("active");
         }
         navMenu.classList.toggle("active");
     });
 
-    languageToggle.addEventListener("click", function() {
+    languageToggle.addEventListener("click", function () {
         if (navMenu.classList.contains("active")) {
             navMenu.classList.remove("active");
         }
         languageMenu.classList.toggle("active");
     });
 
-    window.addEventListener("resize", function() {
+    darkModeButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        document.querySelector("header").classList.toggle("dark-mode");
+        document.querySelector("footer").classList.toggle("dark-mode");
+        document.querySelectorAll("header ul li a").forEach(link => {
+            link.classList.toggle("dark-mode");
+        });
+    });
+
+
+    window.addEventListener("resize", function () {
         if (window.innerWidth > 768) {
             if (navMenu.classList.contains("active")) {
                 navMenu.classList.remove("active");

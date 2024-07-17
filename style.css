@@ -18,13 +18,12 @@ header {
     top: 0;
     background: #F0F0F0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 10vh;
     width: 100%;
     position: fixed;
     font-size: 1em;
-    padding: 0;
 }
 
 header .site-title {
@@ -32,6 +31,8 @@ header .site-title {
     font-size: 2em;
     color: #004080;
     padding-left: 5vw;
+    flex-grow: 1; /* Añadido para ocupar el espacio restante */
+    text-align: center;
 }
 
 header .nav-menu {
@@ -83,7 +84,11 @@ footer {
 
 .font {
     font-family: Arial, sans-serif;
+}
 
+.language-darkmode-container {
+    display: flex;
+    align-items: center;
 }
 
 .language-toggle {
@@ -92,9 +97,8 @@ footer {
     font-size: 1em;
     padding: 1vh 2vw;
     cursor: pointer;
-    color: white;
+    color: #004080;
     margin-left: 2vw;
-
 }
 
 .language-menu {
@@ -106,12 +110,11 @@ footer {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #004080 ; /* Fondo de idioma */
+    background-color: #004080; /* Fondo de idioma */
     padding: 1vh;
     border-radius: 0.5em;
     color: #FFFFFF; /* Asegúrate de que el color de texto sea blanco */
 }
-
 
 .language-menu.active > div {
     display: block;
@@ -127,7 +130,6 @@ footer {
 }
 
 #language-button {
-
     padding: 1vh 2vw;
     color: #004080;
 }
@@ -137,14 +139,54 @@ footer {
     padding: 5px 10px; /* Ajusta el padding según el diseño */
     cursor: pointer; /* Cambia el cursor a pointer para indicar que son clickeables */
     margin-right: 5px; /* Añade margen derecho para separar los botones */
-
 }
-
 
 .language-menu button:hover {
     background-color: #A8D5BA;
     transition: background-color 0.3s ease;
 }
+
+.darkMode {
+    border: none;
+    padding: 5px 10px;
+    color: #004080;
+    margin-left: 2vw; /* Ajustado para separación */
+    cursor: pointer;
+}
+
+.darkMode:hover {
+    background-color: green;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Modo Oscuro */
+
+body.dark-mode {
+    background: #333333;
+    color: #FFFFFF;
+}
+
+header.dark-mode, footer.dark-mode {
+    background: #2C2C2C;
+    color: #FFFFFF;
+}
+
+header.dark-mode ul li a {
+    color: #FFFFFF;
+}
+
+header.dark-mode ul li a:hover {
+    background-color: #A8D5BA;
+}
+
+.language-darkmode-container .darkMode.dark-mode {
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+
 
 
 
@@ -172,15 +214,17 @@ footer {
     header .nav-menu {
         margin-right: 2vw;
         transform: translateX(-100%);
-        transition: opacity 0.5s ,transform 0.5s ease-in-out;
+        transition: opacity 0.5s, transform 0.5s ease-in-out;
         position: fixed;
-        top: 10vh;
-        left: 0;
+        top: 15vh;
+        left: -1em;
         height: calc(100vh - 10vh);
         background-color: #004080;
         width: 40%;
         z-index: 1000;
         opacity: 0;
+        padding: 20px;
+        border-radius: 1em;
     }
 
     .nav-menu.active {
@@ -218,12 +262,15 @@ footer {
 
     .menu-buttons {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw; /* Espacio entre los botones */
         flex-direction: column;
-        align-items: flex-start;
-
     }
 
-    .menu-toggle, .language-toggle {
+    .menu-toggle,
+    .language-toggle,
+    .darkMode {
         display: block;
         border: none;
         background-color: transparent;
@@ -234,6 +281,11 @@ footer {
         margin: 0.5vh 2vw;
     }
 
+    .menu-toggle:hover {
+        background: #A8D5BA;
+        transition: background-color 0.3s ease;
+    }
+
     footer {
         padding: 2vh 0;
     }
@@ -241,7 +293,6 @@ footer {
     .language-menu {
         position: static;
         width: auto;
-
     }
 
     .language-menu.active > div {
@@ -278,10 +329,17 @@ footer {
         transform: translateX(0);
     }
 
-
-
     .language-menu button:hover {
         background-color: #A8D5BA;
         transition: background-color 0.3s ease;
     }
+
+
+
+
+    /* Modo Oscuro */
+
+
+
+
 }

@@ -15,26 +15,28 @@
         <ul class="font">
             <li><a href="index.html" data-key="home"></a></li>
             <li><a href="about_me.html" data-key="about_me"></a></li>
-            <li><a href="#" data-key="experience"></a></li>
-            <li><a href="#" data-key="education"></a></li>
-            <li><a href="#" data-key="skills"></a></li>
-            <li><a href="#" data-key="projects"></a></li>
+            <li><a href="experience.html" data-key="experience"></a></li>
+            <li><a href="education.html" data-key="education"></a></li>
+            <li><a href="skills.html" data-key="skills"></a></li>
+            <li><a href="projects.html" data-key="projects"></a></li>
             <li><a href="certifications.html" data-key="certifications"></a></li>
         </ul>
     </nav>
 
     <div class="menu-buttons">
-
         <button class="menu-toggle" data-key="options"></button>
 
-        <nav class="language-menu">
-            <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
-            <div class = 'content-language'>
-                <button onclick="changeLanguage('es')" class="language-button">ES</button>
-                <button onclick="changeLanguage('en')" class="language-button">EN</button>
-            </div>
-        </nav>
+        <div class="language-darkmode-container">
+            <nav class="language-menu">
+                <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
+                <div class="content-language">
+                    <button onclick="changeLanguage('es')" class="language-button">ES</button>
+                    <button onclick="changeLanguage('en')" class="language-button">EN</button>
+                </div>
+            </nav>
 
+            <button class="darkMode">Modo oscuro</button>
+        </div>
     </div>
 </header>
 
