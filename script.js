@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const languageMenu = document.querySelector(".language-menu");
     const darkModeButton = document.querySelector(".darkMode");
 
+    // Función para aplicar o quitar el modo oscuro
+    function applyDarkMode(isDark) {
+        document.body.classList.toggle("dark-mode", isDark);
+        document.querySelector("header").classList.toggle("dark-mode", isDark);
+        document.querySelector("footer").classList.toggle("dark-mode", isDark);
+        document.querySelectorAll("header ul li a").forEach(link => {
+            link.classList.toggle("dark-mode", isDark);
+        });
+    }
+
+    // Recuperar el estado del modo oscuro desde localStorage
+    const darkModeEnabled = localStorage.getItem("darkMode") === "true";
+    applyDarkMode(darkModeEnabled);
+
     menuToggle.addEventListener("click", function () {
         if (languageMenu.classList.contains("active")) {
             languageMenu.classList.remove("active");
@@ -20,25 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     darkModeButton.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-        document.querySelector("header").classList.toggle("dark-mode");
-        document.querySelector("footer").classList.toggle("dark-mode");
-        document.querySelectorAll("header ul li a").forEach(link => {
-            link.classList.toggle("dark-mode");
-        });
+        const isDark = document.body.classList.toggle("dark-mode");
+        applyDarkMode(isDark);
+        localStorage.setItem("darkMode", isDark.toString());
     });
-
 
     window.addEventListener("resize", function () {
         if (window.innerWidth > 768) {
-            if (navMenu.classList.contains("active")) {
-                navMenu.classList.remove("active");
-            }
-            if (languageMenu.classList.contains("active")) {
-                languageMenu.classList.remove("active");
-            }
-        }
-        if (window.innerWidth <= 768) {
+            navMenu.classList.remove("active");
+            languageMenu.classList.remove("active");
+        } else {
             navMenu.classList.add("no-transition");
             setTimeout(() => {
                 navMenu.classList.remove("no-transition");
@@ -47,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//Cambiar idioma por defecto.
 document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('es'); // Idioma por defecto
 });

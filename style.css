@@ -8,6 +8,7 @@ body {
     align-items: center;
     height: calc(100vh - 20vh);
     flex-direction: column;
+    transition: 2s;
 }
 
 .divCenter {
@@ -151,7 +152,12 @@ footer {
     padding: 5px 10px;
     color: #004080;
     margin-left: 2vw; /* Ajustado para separación */
+    background-color: transparent;
     cursor: pointer;
+}
+
+.darkMode::after{
+    content: "🌙";
 }
 
 .darkMode:hover {
@@ -162,6 +168,15 @@ footer {
 
 
 /* Modo Oscuro */
+
+
+.dark-mode{
+    transition: 2s;
+}
+
+.dark-mode .darkMode::after{
+    content: "💡";
+}
 
 body.dark-mode {
     background: #333333;
