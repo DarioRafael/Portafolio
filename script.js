@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 1100) {
             navMenu.classList.remove("active");
             languageMenu.classList.remove("active");
         } else {

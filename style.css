@@ -5,14 +5,15 @@ body {
     padding: 10vh 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 20vh);
+    align-items: flex-start;
+    min-height: 100vh;
     flex-direction: column;
     transition: 2s;
 }
 
 .divCenter {
     margin: 10em;
+
 }
 
 header {
@@ -147,6 +148,8 @@ footer {
     transition: background-color 0.3s ease;
 }
 
+/* Modo Oscuro */
+
 .darkMode {
     border: none;
     padding: 5px 10px;
@@ -166,8 +169,66 @@ footer {
 }
 
 
+/* Certificados */
 
-/* Modo Oscuro */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.certificate {
+    background: #F9F9F9;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+}
+
+.certificate-details {
+    padding: 15px;
+}
+
+.certificate-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #004080;
+}
+
+.certificate-details p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.certificate-details span {
+    font-weight: bold;
+}
+
+.certificate a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.certificate a:hover {
+    background-color: #A8D5BA;
+}
+
 
 
 .dark-mode{
@@ -206,7 +267,7 @@ header.dark-mode ul li a:hover {
 
 
 /* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     body {
         padding: 5vh 0;
         flex-direction: column;
@@ -350,6 +411,27 @@ header.dark-mode ul li a:hover {
     }
 
 
+    #certifications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 10px; /* Ajusta el padding según sea necesario */
+        margin-top: 3em; /* Ajusta el margen superior según sea necesario */
+    }
+
+    .certificates-container {
+        flex-direction: column; /* Asegura que los certificados estén en columna */
+        align-items: center; /* Centra los certificados horizontalmente */
+        padding: 0; /* Elimina el padding para un mejor ajuste */
+        margin-top: 2em; /* Ajusta el margen superior según sea necesario */
+        margin-bottom: 4em ;
+    }
+
+    .certificate {
+        width: 50%; /* Ajusta el ancho del contenedor de certificado al 100% */
+        max-width: 50%; /* Asegura que el certificado no exceda el ancho máximo */
+    }
 
 
     /* Modo Oscuro */
