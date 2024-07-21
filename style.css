@@ -30,7 +30,7 @@ header {
 
 header .site-title {
     margin: 0;
-    font-size: 2em;
+    font-size: 3em;
     color: #004080;
     padding-left: 5vw;
     flex-grow: 1; /* Añadido para ocupar el espacio restante */
@@ -54,7 +54,7 @@ header ul {
 
 header ul li {
     margin-left: 3vw;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 header ul li a {
@@ -70,6 +70,8 @@ header ul li a:hover {
 
 .menu-toggle {
     display: none;
+
+
 }
 
 footer {
@@ -81,16 +83,18 @@ footer {
     text-align: center;
     justify-content: center;
     padding: 1vh 0;
-    font-size: 0.5em;
+    font-size: 1em;
 }
 
 .font {
     font-family: Arial, sans-serif;
+    font-size: 1em ;
 }
 
 .language-darkmode-container {
     display: flex;
     align-items: center;
+    font-size: 2em;
 }
 
 .language-toggle {
@@ -157,6 +161,7 @@ footer {
     margin-left: 2vw; /* Ajustado para separación */
     background-color: transparent;
     cursor: pointer;
+    font-size: 2em;
 }
 
 .darkMode::after{
@@ -283,8 +288,9 @@ header.dark-mode ul li a:hover {
         padding: 1vh 0;
     }
 
-    header .site-title {
+    header .site-title { /* Dario Rafael Logo. */
         padding-left: 2vw;
+        font-size: 6vw;
     }
 
     header .nav-menu {
@@ -344,22 +350,38 @@ header.dark-mode ul li a:hover {
         flex-direction: column;
     }
 
-    .menu-toggle,
+    .menu-toggle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 4vh;
+        padding: 1vh 2vw;
+        cursor: pointer;
+        color: #004080;
+    }
+
     .language-toggle,
     .darkMode {
         display: block;
         border: none;
         background-color: transparent;
-        font-size: 1em;
+        font-size: 2vh;
         padding: 1vh 2vw;
         cursor: pointer;
         color: #004080;
-        margin: 0.5vh 2vw;
+
     }
 
     .menu-toggle:hover {
         background: #A8D5BA;
         transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle::after{
+        content: " ☰ ";
     }
 
     footer {
