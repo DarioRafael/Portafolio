@@ -25,7 +25,7 @@ header {
     height: 10vh;
     width: 100%;
     position: fixed;
-    font-size: 1em;
+
 }
 
 header .site-title {
@@ -335,6 +335,7 @@ header.dark-mode ul li a:hover {
         padding: 1vh 2vw;
         text-align: left;
         color: #FFFFFF;
+        font-size: 1em;
     }
 
     header ul li a:hover {
@@ -368,7 +369,7 @@ header.dark-mode ul li a:hover {
         display: block;
         border: none;
         background-color: transparent;
-        font-size: 2vh;
+        font-size: 1em;
         padding: 1vh 2vw;
         cursor: pointer;
         color: #004080;
@@ -386,6 +387,7 @@ header.dark-mode ul li a:hover {
 
     footer {
         padding: 2vh 0;
+        font-size: 0.9em;
     }
 
     .language-menu {
@@ -431,7 +433,6 @@ header.dark-mode ul li a:hover {
         background-color: #A8D5BA;
         transition: background-color 0.3s ease;
     }
-
 
     #certifications {
         display: flex;
