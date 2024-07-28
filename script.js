@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('es'); // Idioma por defecto
 });
 
+document.getElementById('settings-button').addEventListener('click', function() {
+    const settingsContainer = document.getElementById('settings-container');
+    settingsContainer.classList.toggle('active');
+});
+
 function changeLanguage(language) {
     fetch('translations.json')
         .then(response => response.json())

@@ -106,13 +106,43 @@ footer {
 
 .font {
     font-family: Arial, sans-serif;
-    font-size: 1em ;
+    font-size: 1.5em ;
 }
 
+/* Settings */
+
+.settings-toggle {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    color: #004080;
+}
+
+.settings-toggle::after{
+    content: '⚙️';
+}
+
+.settings-container {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1vh 2vw;
+    background-color: transparent;
+    border-radius: 0.5em;
+}
+
+.settings-container.active {
+    display: flex;
+}
+
+/* Language */
 .language-darkmode-container {
     display: flex;
     align-items: center;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .language-toggle {
@@ -413,7 +443,7 @@ header.dark-mode ul li a:hover {
         display: block;
         border: none;
         background-color: transparent;
-        font-size: 4vh;
+        font-size: 9vw;
         padding: 1vh 2vw;
         cursor: pointer;
         color: #004080;
@@ -488,6 +518,19 @@ header.dark-mode ul li a:hover {
         background-color: #A8D5BA;
         transition: background-color 0.3s ease;
     }
+
+
+
+    /* Settings */
+    .settings-toggle {
+        position: absolute;
+        top: -0.2em;
+        right: 0;
+        display: block;
+        font-size: 3em;
+
+    }
+
 
 
     /* Footer */

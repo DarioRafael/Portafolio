@@ -24,17 +24,20 @@
         </ul>
     </nav>
 
-    <div class="language-darkmode-container">
-        <nav class="language-menu">
-            <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
-            <div class="content-language">
-                <button onclick="changeLanguage('es')" class="language-button">ES</button>
-                <button onclick="changeLanguage('en')" class="language-button">EN</button>
-            </div>
-        </nav>
-
-        <button class="darkMode"></button>
+    <button class="settings-toggle" id="settings-button"></button>
+    <div class="settings-container" id="settings-container">
+        <div class="language-darkmode-container">
+            <nav class="language-menu">
+                <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
+                <div class="content-language">
+                    <button onclick="changeLanguage('es')" class="language-button">ES</button>
+                    <button onclick="changeLanguage('en')" class="language-button">EN</button>
+                </div>
+            </nav>
+            <button class="darkMode"></button>
+        </div>
     </div>
+
 </header>
 
 <div class="divCenter">
