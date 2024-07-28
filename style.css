@@ -233,29 +233,12 @@ header.dark-mode ul li a:hover {
 /*  Index  */
 
 
-.intro-section, .portfolio-section {
+.intro-section {
     margin-bottom: 2rem;
 }
 
-.portfolio-section .portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 
-.portfolio-item {
-    background-color: #004080;
-    color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    flex: 1 1 calc(33.333% - 1rem);
-    box-sizing: border-box;
-    text-align: center;
-}
 
-.portfolio-item h3 {
-    margin-top: 0;
-}
 
 /* Sobre mi  */
 .about-me-section {
@@ -358,7 +341,7 @@ header.dark-mode ul li a:hover {
 
     header .site-title { /* Dario Rafael Logo. */
         padding-left: 2vw;
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
     header .nav-menu {
@@ -437,7 +420,7 @@ header.dark-mode ul li a:hover {
         display: block;
         border: none;
         background-color: transparent;
-        font-size: 1em;
+        font-size: 2em;
         padding: 1vh 2vw;
         cursor: pointer;
         color: #004080;
@@ -503,11 +486,31 @@ header.dark-mode ul li a:hover {
     }
 
 
+    /* Footer */
+    footer {
+        padding: 1vh 0;
+        font-size: 1em;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .social-icon {
+        display: inline-block;
+        width: 7em;
+        height: 7em;
+    }
+
+
     /* Index */
 
     .content-principal{
         text-align: center;
-        margin: 10em;
+        margin: 4em;
+        font-size: 3em;
     }
 
 
