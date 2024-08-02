@@ -1,3 +1,5 @@
+/* General */
+
 body {
     background: #FFFFFF;
     color: #333333;
@@ -7,13 +9,19 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     flex-direction: column;
-    transition: 2s;
+
 }
 
 .divCenter {
     margin: 10em;
-
 }
+
+.font {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em ;
+}
+
+/* Header */
 
 header {
     top: 0;
@@ -24,10 +32,9 @@ header {
     height: 10vh;
     width: 100%;
     position: fixed;
-
 }
 
-header .site-title {
+.site-title {
     margin: 0;
     font-size: 2em;
     color: #004080;
@@ -36,7 +43,7 @@ header .site-title {
     text-align: center;
 }
 
-header .nav-menu {
+.nav-menu {
     margin-right: 5vw;
 }
 
@@ -62,51 +69,20 @@ header ul li a {
     font-size: 1em;
 }
 
-header ul li a:hover {
-    background-color: #A8D5BA;
-    transition: background-color 0.3s ease;
-}
+/* Menu Toggle */
 
 .menu-toggle {
-    display: none;
-
-
+    display: none; /* Oculta el botón en pantallas grandes */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2em; /* Ajusta el tamaño de la fuente */
+    padding: 0.5em; /* Añade padding para área de clic más grande */
+    color: #004080; /* Color del ícono */
 }
 
-/* Footer */
-footer {
-    background: #F0F0F0;
-    color: #333333;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    justify-content: center;
-    padding: 1vh 0;
-    font-size: 1em;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.social-icon {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-}
-
-.social-icon img {
-    width: 100%;
-    height: 100%;
-}
-
-
-.font {
-    font-family: Arial, sans-serif;
-    font-size: 1.5em ;
+.menu-toggle::after {
+    content: " ☰ "; /* Ícono del menú hamburguesa */
 }
 
 /* Settings */
@@ -121,7 +97,7 @@ footer {
     color: #004080;
 }
 
-.settings-toggle::after{
+.settings-toggle::after {
     content: '⚙️';
 }
 
@@ -139,6 +115,7 @@ footer {
 }
 
 /* Language */
+
 .language-darkmode-container {
     display: flex;
     align-items: center;
@@ -196,12 +173,39 @@ footer {
     font-size: 1em;
 }
 
-.language-menu button:hover {
-    background-color: #A8D5BA;
-    transition: background-color 0.3s ease;
+/* Footer */
+footer {
+    background: #F0F0F0;
+    color: #333333;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    padding: 1vh 0;
+    font-size: 1em;
 }
 
-/* Modo Oscuro */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Dark Mode */
 
 .darkMode {
     border: none;
@@ -213,21 +217,16 @@ footer {
     font-size: 2em;
 }
 
-.darkMode::after{
+.darkMode::after {
     content: "🌙";
 }
 
-.darkMode:hover {
-    background-color: green;
-    transition: background-color 0.3s ease;
+.dark-mode {
+
+
 }
 
-
-.dark-mode{
-    transition: 2s;
-}
-
-.dark-mode .darkMode::after{
+.dark-mode .darkMode::after {
     content: "💡";
 }
 
@@ -245,39 +244,61 @@ header.dark-mode ul li a {
     color: #FFFFFF;
 }
 
-header.dark-mode ul li a:hover {
-    background-color: #A8D5BA;
-}
-
 .language-darkmode-container .darkMode.dark-mode {
     background-color: #555555;
     color: #FFFFFF;
 }
 
-/* Sobre mi  */
+
 .dark-mode .about-me-section {
     color: white;
 }
 
 
-/*  Index  */
 
+/* Dark mode skills */
 
-.intro-section {
-    margin-bottom: 2rem;
+.dark-mode .skills-section{
+    background-color: black;
+}
+
+.dark-mode .skills-item{
+    color: rgb(200, 200, 200);
 }
 
 
+/* Dark mode experience */
+.dark-mode .experience-item {
+    background-color: #2E2E2E; /* Gris oscuro para el fondo */
+    color: #C0C0C0; /* Gris plateado para el texto */
+}
 
+.dark-mode .experience-item h3,
+.dark-mode .experience-item p,
+.dark-mode .experience-item ul li {
+    color: #C0C0C0; /* Gris plateado para el texto */
+}
 
-/* Sobre mi  */
+.dark-mode #experience h2 {
+    color: #E0E0E0; /* Gris claro para el texto */
+}
+
+.dark-mode .settings-modal {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad para difuminar */
+}
+
+.dark-mode .settings-modal-content {
+    background-color: #2C2C2C; /* Fondo del contenido del modal en modo oscuro */
+    color: #FFFFFF; /* Color del texto dentro del modal */
+    border: 1px solid #888; /* Borde opcional */
+}
+
+/* About Me */
+
 .about-me-section {
-
-
     border-radius: 8px;
     color: #333333;
     margin: 5em auto;
-
 }
 
 .profile-photo {
@@ -288,8 +309,7 @@ header.dark-mode ul li a:hover {
     margin: 2em auto;
 }
 
-
-/* Certificados */
+/* Certificates */
 
 .certificates-container {
     display: flex;
@@ -346,16 +366,148 @@ header.dark-mode ul li a:hover {
 }
 
 .certificate a:hover {
-    background-color: #A8D5BA;
+    background-color: red;
+}
+
+/* Sobre mi */
+
+/* Contenedor de la sección de habilidades */
+.skills-section {
+    padding: 2em;
+    margin: 2em 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Título principal de la sección */
+.skills-title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #004080;
+}
+
+/* Subtítulos de categorías */
+.skills-category {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #004080;
+}
+
+/* Lista de habilidades */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista de habilidades */
+.skills-item {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Eliminar borde inferior del último elemento */
+.skills-item:last-child {
+    border-bottom: none;
+}
+
+/* Experiencia Laboral */
+#experience {
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 800px; /* Ajusta el ancho máximo para pantallas grandes */
+}
+
+#experience h2 {
+    font-size: 2em;
+    color: #004080;
+    margin-bottom: 1em;
+}
+
+.experience-item {
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco ligeramente opaco */
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    color: #004080;
+    margin: 0 0 0.5em 0;
+}
+
+.experience-item p {
+    margin: 0 0 1em 0;
+    font-size: 1em;
+    color: #333333; /* Texto principal */
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 1.5em; /* Indentación para listas */
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: #333333;
 }
 
 
+/* Modal */
 
+.settings-modal {
+    display: none; /* Oculta por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
 
+.settings-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Tamaño máximo */
+    border-radius: 8px;
+    position: relative;
+}
 
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-/* Media queries para dispositivos móviles */
+/* Media Queries para Dispositivos Móviles */
+
 @media (max-width: 1100px) {
     body {
         flex-direction: column;
@@ -366,16 +518,23 @@ header.dark-mode ul li a:hover {
         margin: 20% auto;
     }
 
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 1vh 0;
-        margin-bottom: 5em;
+    .font {
+        font-size: 4em;
     }
 
-    header .site-title { /* Dario Rafael Logo. */
-        padding-left: 2vw;
-        font-size: 8vw;
+    /* Header */
+
+    header {
+        flex-direction: row; /* Cambia a fila para alinear horizontalmente */
+        justify-content: space-between; /* Distribuye espacio entre los elementos */
+        align-items: center; /* Alinea verticalmente al centro */
+        padding: 1vh 2vw; /* Ajusta el padding según sea necesario */
+    }
+
+    .site-title {
+        flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+        text-align: center; /* Centra el texto del título */
+        order: 2; /* Segundo en el orden */
     }
 
     header .nav-menu {
@@ -392,6 +551,9 @@ header.dark-mode ul li a:hover {
         opacity: 0;
         padding: 20px;
         border-radius: 1em;
+
+
+        font-size: 1vw;
     }
 
     .nav-menu.active {
@@ -423,11 +585,6 @@ header.dark-mode ul li a:hover {
         font-size: 1em;
     }
 
-    header ul li a:hover {
-        background-color: #A8D5BA;
-        transition: background-color 0.3s ease;
-    }
-
     .menu-buttons {
         display: flex;
         align-items: center;
@@ -436,17 +593,10 @@ header.dark-mode ul li a:hover {
         flex-direction: column;
     }
 
-    .menu-toggle{
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 9vw;
-        padding: 1vh 2vw;
-        cursor: pointer;
-        color: #004080;
+    .menu-toggle {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+        order: 1; /* Primero en el orden */
+        position: static; /* Coloca en el flujo normal */
     }
 
     .language-toggle,
@@ -458,15 +608,9 @@ header.dark-mode ul li a:hover {
         padding: 1vh 2vw;
         cursor: pointer;
         color: #004080;
-
     }
 
-    .menu-toggle:hover {
-        background: #A8D5BA;
-        transition: background-color 0.3s ease;
-    }
-
-    .menu-toggle::after{
+    .menu-toggle::after {
         content: " ☰ ";
     }
 
@@ -514,24 +658,11 @@ header.dark-mode ul li a:hover {
         transform: translateX(0);
     }
 
-    .language-menu button:hover {
-        background-color: #A8D5BA;
-        transition: background-color 0.3s ease;
-    }
-
-
-
     /* Settings */
     .settings-toggle {
-        position: absolute;
-        top: -0.2em;
-        right: 0;
-        display: block;
-        font-size: 3em;
-
+        position: static; /* Cambia la posición para el flujo normal */
+        order: 3; /* Tercero en el orden */
     }
-
-
 
     /* Footer */
     footer {
@@ -551,16 +682,12 @@ header.dark-mode ul li a:hover {
         height: 7em;
     }
 
-
     /* Index */
 
-    .content-principal{
+    .content-principal {
         text-align: center;
         font-size: 3em;
     }
-
-
-
 
     /* Certificados */
 
@@ -569,8 +696,9 @@ header.dark-mode ul li a:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 0 10px; /* Ajusta el padding según sea necesario */
-        margin-top: 3em; /* Ajusta el margen superior según sea necesario */
+        padding: 0 10vw; /* Ajusta el padding según sea necesario */
+        margin-top: 10vh; /* Ajusta el margen superior según sea necesario */
+        margin-bottom: 10vh;
     }
 
     .certificates-container {
@@ -586,10 +714,52 @@ header.dark-mode ul li a:hover {
         max-width: 100%; /* Asegura que el certificado no exceda el ancho máximo */
     }
 
+    .certificate a {
+        padding: 1em;
+        font-size: 3vw;
+    }
+
+    /* Skills */
+    .skills-section {
+        padding: 1em;
+    }
+
+    .skills-title {
+        font-size: 1.8em;
+    }
+
+    .skills-category {
+        font-size: 1.3em;
+    }
+
+    .skills-item {
+        font-size: 1em;
+    }
 
 
+    /* Experiencia laboral*/
 
+    #experience {
+        padding: 0.5em;
+        margin: 1em auto;
+        max-width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    }
 
+    #experience h2 {
+        font-size: 1.5em;
+    }
 
+    .experience-item {
+        padding: 0.5em;
+    }
+
+    .experience-item h3 {
+        font-size: 1.2em;
+    }
+
+    .experience-item p,
+    .experience-item ul li {
+        font-size: 0.9em;
+    }
 
 }

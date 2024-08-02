@@ -7,9 +7,9 @@
 </head>
 <body>
 
-<header class="font">
-    <button class="menu-toggle" ></button>
-    <h1 class="site-title" data-key="site_title">Dario Rafael</h1>
+<header >
+    <button class="menu-toggle font"  ></button>
+    <h1 class="site-title font" data-key="site_title">Dario Rafael</h1>
 
     <nav class="nav-menu">
         <ul class="font">
@@ -22,32 +22,56 @@
             <li><a href="certifications.html" data-key="certifications"></a></li>
         </ul>
     </nav>
+    <button class="settings-toggle font" id="settings-button"></button>
 
-    <button class="settings-toggle" id="settings-button"></button>
-    <div class="settings-container" id="settings-container">
-        <div class="language-darkmode-container">
-            <nav class="language-menu">
-                <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
-                <div class="content-language">
-                    <button onclick="changeLanguage('es')" class="language-button">ES</button>
-                    <button onclick="changeLanguage('en')" class="language-button">EN</button>
-                </div>
-            </nav>
-            <button class="darkMode"></button>
+    <div id="settings-modal" class="settings-modal">
+        <div class="settings-modal-content">
+            <span class="close-button">&times;</span>
+            <div class="language-darkmode-container">
+                <nav class="language-menu">
+                    <button class="language-toggle" id="language-button" data-key="language">Idioma</button>
+                    <div class="content-language">
+                        <button onclick="changeLanguage('es')" class="language-button">ES</button>
+                        <button onclick="changeLanguage('en')" class="language-button">EN</button>
+                    </div>
+                </nav>
+                <button class="darkMode"></button>
+            </div>
         </div>
     </div>
+
 
 </header>
 
 <div class="divCenter">
     <main>
-        <section>
-            <h2>Skills</h2>
+        <section class="skills-section">
+            <h2 class="skills-title">Skills</h2>
 
+            <h3 class="skills-category">Programming Languages</h3>
+            <ul class="skills-list">
+                <li class="skills-item">Java - Intermediate</li>
+                <li class="skills-item">Python - Intermediate</li>
+                <li class="skills-item">JavaScript - Intermediate</li>
+                <li class="skills-item">C++ - Basic</li>
+                <li class="skills-item">C# - Basic to Intermediate</li>
+                <li class="skills-item">Go - Basic</li>
+            </ul>
 
+            <h3 class="skills-category">Web Technologies</h3>
+            <ul class="skills-list">
+                <li class="skills-item">HTML - Intermediate</li>
+                <li class="skills-item">CSS - Basic</li>
+            </ul>
 
+            <h3 class="skills-category">Databases</h3>
+            <ul class="skills-list">
+                <li class="skills-item">SQL - Basic</li>
+            </ul>
         </section>
     </main>
+
+
 </div>
 
 <footer>

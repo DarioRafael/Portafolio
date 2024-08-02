@@ -4,6 +4,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.querySelector(".language-toggle");
     const languageMenu = document.querySelector(".language-menu");
     const darkModeButton = document.querySelector(".darkMode");
+    const settingsButton = document.getElementById('settings-button');
+    const modal = document.getElementById('settings-modal');
+    const closeButton = document.querySelector('.close-button');
+
+
+
+    settingsButton.addEventListener('click', function() {
+        modal.style.display = 'flex'; // Mostrar el modal
+    });
+
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none'; // Ocultar el modal
+    });
+
+    // Cerrar el modal si el usuario hace clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
 
     // Función para aplicar o quitar el modo oscuro
     function applyDarkMode(isDark) {
@@ -61,6 +82,8 @@ document.getElementById('settings-button').addEventListener('click', function() 
     const settingsContainer = document.getElementById('settings-container');
     settingsContainer.classList.toggle('active');
 });
+
+
 
 function changeLanguage(language) {
     fetch('translations.json')
